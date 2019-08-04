@@ -1,16 +1,11 @@
 import React from 'react';
-import HeaderContainer from './header';
-import MainContainer from './main';
-import {Provider} from 'react-redux';
-import store from './store';
+import ColoredUserpic from './coloreduserpic/coloreduserpic.jsx';
 
 
 const App = () => (
-	<Provider store={store}>
-		<HeaderContainer/>
-		<MainContainer/>
-	</Provider>
+	<ColoredUserpic src={'https://picsum.photos/200/300?grayscale'}
+		size={'150px'} background={'red'} margin={'4px'}
+		colorWidth={'6px'}/>
 );
 
 export default App;
-
