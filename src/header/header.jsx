@@ -14,10 +14,9 @@ export default class Header extends Component {
 		super(props);
 		this.state = {
 			search: '',
-			level: 'Любой уровень',
-			category: 'Все категории',
-			language: 'Все языки',
-			submitted: true,
+			level: '',
+			category: '',
+			language: '',
 		};
 	}
 
@@ -50,18 +49,18 @@ export default class Header extends Component {
 							<label className={header.labels}>Фильтровать статьи
 								по:</label>
 							<select className={header.select} name="level" onChange={(e) => this.onInputChange(e)}>
-								<option value={level}>{level}</option>
+								<option value={level}>Любой уровень</option>
 								{levels.map((level, id) =>
 									<option key={id} value={level}>{level}</option>)}
 							</select>
 							<select className={header.select} name="category" onChange={(e) => this.onInputChange(e)}>
-								<option value={category}>{category}</option>
+								<option value={category}>Все категории</option>
 								{categories.map((categorie, id) => <option
 									key={id}
 									value={categorie}>{categorie}</option>)}
 							</select>
 							<select className={header.select} name="language" onChange={(e) => this.onInputChange(e)}>
-								<option value={language}>{language}</option>
+								<option value={language}>Все языки</option>
 								{languages.map((language, id) => <option
 									key={id}
 									value={language}>{language}</option>)}
