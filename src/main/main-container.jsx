@@ -17,8 +17,8 @@ class MainContainer extends Component {
 	}
 }
 
-const mapStateToProps = ({search, level, category, language, submitted}) => ({
-	search, level, category, language, submitted,
+const mapStateToProps = ({search, level, category, language}) => ({
+	search, level, category, language,
 });
 
 export default connect(mapStateToProps, null)(MainContainer);
